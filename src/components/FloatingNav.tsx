@@ -2,8 +2,6 @@ import React from "react";
 import Image from "next/image";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
-  IconBrandGithub,
-  IconBrandX,
   IconExchange,
   IconHome,
   IconNewSection,

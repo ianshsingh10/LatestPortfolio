@@ -3,6 +3,7 @@ import {
   DraggableCardBody,
   DraggableCardContainer,
 } from "@/components/ui/draggable-card";
+import Image from "next/image";
 
 export function DraggableCardDemo() {
   const items = [
@@ -56,7 +57,7 @@ export function DraggableCardDemo() {
       </p>
       {items.map((item) => (
         <DraggableCardBody key={item.title} className={item.className}>
-          <img
+          <Image
             src={item.image}
             alt={item.title}
             className="pointer-events-none relative z-10 h-80 w-80 object-cover"
