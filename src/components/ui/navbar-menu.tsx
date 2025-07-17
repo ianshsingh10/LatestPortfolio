@@ -7,9 +7,10 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "motion/react";
+import Image from "next/image";
+import Link from "next/link";
 
 import React, { useRef, useState } from "react";
-
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -67,9 +68,9 @@ export const Navbar = ({ children, className }: NavbarProps) => {
         React.isValidElement(child)
           ? React.cloneElement(
               child as React.ReactElement<{ visible?: boolean }>,
-              { visible },
+              { visible }
             )
-          : child,
+          : child
       )}
     </motion.div>
   );
@@ -91,15 +92,15 @@ export const Menu = ({
   );
 };
 
-export const NavBody = ({ 
+export const NavBody = ({
   children,
-  className, 
+  className,
   visible,
   setActive,
 }: NavBodyProps) => {
   return (
     <motion.div
-    onMouseLeave={() => setActive(null)}
+      onMouseLeave={() => setActive(null)}
       animate={{
         backdropFilter: visible ? "blur(10px)" : "none",
         boxShadow: visible
@@ -119,7 +120,7 @@ export const NavBody = ({
       className={cn(
         "relative z-[60] mx-auto hidden w-full max-w-2xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
         visible && "bg-white/80 dark:bg-neutral-950/80",
-        className,
+        className
       )}
     >
       {children}
@@ -149,7 +150,7 @@ export const MobileNav = ({ children, className, visible }: MobileNavProps) => {
       className={cn(
         "relative z-50 mx-auto flex w-full max-w-[calc(100vw-6rem)] flex-col items-center justify-between bg-transparent px-0 py-2 lg:hidden",
         visible && "bg-white/80 dark:bg-neutral-950/80",
-        className,
+        className
       )}
     >
       {children}
@@ -165,7 +166,7 @@ export const MobileNavHeader = ({
     <div
       className={cn(
         "flex w-full flex-row items-center justify-between",
-        className,
+        className
       )}
     >
       {children}
@@ -177,7 +178,6 @@ export const MobileNavMenu = ({
   children,
   className,
   isOpen,
-  onClose,
 }: MobileNavMenuProps) => {
   return (
     <AnimatePresence>
@@ -188,7 +188,7 @@ export const MobileNavMenu = ({
           exit={{ opacity: 0 }}
           className={cn(
             "absolute inset-x-0 top-16 z-50 flex w-full flex-col items-start justify-start gap-4 rounded-lg bg-white px-4 py-8 shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset] dark:bg-neutral-950",
-            className,
+            className
           )}
         >
           {children}
@@ -212,15 +212,6 @@ export const MobileNavToggle = ({
   );
 };
 
-const transition = {
-  type: "spring",
-  mass: 0.5,
-  damping: 11.5,
-  stiffness: 100,
-  restDelta: 0.001,
-  restSpeed: 0.001,
-};
- 
 export const MenuItem = ({
   setActive,
   active,
@@ -234,42 +225,54 @@ export const MenuItem = ({
   href: string;
   children?: React.ReactNode;
 }) => {
+  const hasDropdown = !!children;
+
   return (
-    <a href={href} onMouseEnter={() => setActive(item)} className="relative ">
-      <motion.p
-        transition={{ duration: 0.3 }}
-        className="cursor-pointer text-black hover:opacity-[0.9] dark:text-white"
+    <div onMouseEnter={() => setActive(item)} className="relative group">
+      <Link
+        href={href}
+        className="cursor-pointer text-black hover:opacity-90 dark:text-white"
       >
         {item}
-      </motion.p>
-      {active !== null && (
+      </Link>
+
+      {/* Dropdown only if children exist and is active */}
+      {active === item && hasDropdown && (
         <motion.div
           initial={{ opacity: 0, scale: 0.85, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={transition}
+          transition={{
+            type: "spring",
+            mass: 0.5,
+            damping: 11.5,
+            stiffness: 100,
+            restDelta: 0.001,
+            restSpeed: 0.001,
+          }}
+          className="absolute top-[calc(100%+1.2rem)] left-1/2 transform -translate-x-1/2 pt-4"
         >
-          {active === item && children && (
-            <div className="absolute top-[calc(100%_+_1.2rem)] left-1/2 transform -translate-x-1/2 pt-4">
-              <motion.div
-                transition={transition}
-                layoutId="active" // layoutId ensures smooth animation
-                className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
-              >
-                <motion.div
-                  layout // layout ensures smooth animation
-                  className="w-max h-full p-4"
-                >
-                  {children}
-                </motion.div>
-              </motion.div>
-            </div>
-          )}
+          <motion.div
+            transition={{
+              type: "spring",
+              mass: 0.5,
+              damping: 11.5,
+              stiffness: 100,
+              restDelta: 0.001,
+              restSpeed: 0.001,
+            }}
+            layoutId="active"
+            className="bg-white dark:bg-black backdrop-blur-sm rounded-2xl overflow-hidden border border-black/[0.2] dark:border-white/[0.2] shadow-xl"
+          >
+            <motion.div layout className="w-max h-full p-4">
+              {children}
+            </motion.div>
+          </motion.div>
         </motion.div>
       )}
-    </a>
+    </div>
   );
 };
- 
+
 export const ProductItem = ({
   title,
   description,
@@ -282,8 +285,8 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <a href={href} className="flex space-x-2">
-      <img
+    <Link href={href} className="flex space-x-2">
+      <Image
         src={src}
         width={140}
         height={70}
@@ -298,7 +301,6 @@ export const ProductItem = ({
           {description}
         </p>
       </div>
-    </a>
+    </Link>
   );
 };
- 
