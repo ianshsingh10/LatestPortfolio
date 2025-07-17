@@ -177,7 +177,7 @@ const DotMatrix: React.FC<DotMatrixProps> = ({
 
 type Uniforms = {
   [key: string]: {
-    value: number[] | number[][] | number;
+    value: number[] | number[][] | number | THREE.Vector3[];
     type: string;
   };
 };
@@ -209,10 +209,10 @@ const ShaderMaterial = ({
   });
 
   const getUniforms = React.useCallback(() => {
-    const preparedUniforms: Record<string, { value: number | number[] | THREE.Vector2 | THREE.Vector3; type?: string }> = {};
+    const preparedUniforms: Record<string, { value: number | number[] | THREE.Vector2 | THREE.Vector3 | THREE.Vector3[]; type?: string }> = {};
 
     for (const uniformName in uniforms) {
-      const uniform: { value: number | number[] | number[][]; type: string } = uniforms[uniformName];
+      const uniform: { value: number | number[] | number[][] | THREE.Vector3[]; type: string } = uniforms[uniformName];
 
       switch (uniform.type) {
         case "uniform1f":
@@ -220,24 +220,24 @@ const ShaderMaterial = ({
           break;
         case "uniform3f":
           preparedUniforms[uniformName] = {
-            value: new THREE.Vector3().fromArray(uniform.value),
+            value: new THREE.Vector3().fromArray(uniform.value as number[]),
             type: "3f",
           };
           break;
         case "uniform1fv":
-          preparedUniforms[uniformName] = { value: uniform.value, type: "1fv" };
+          preparedUniforms[uniformName] = { value: uniform.value as number, type: "1fv" };
           break;
         case "uniform3fv":
           preparedUniforms[uniformName] = {
-            value: uniform.value.map((v: number[]) =>
-              new THREE.Vector3().fromArray(v)
+            value: (uniform.value as number[][]).map((v: number[]) =>
+                new THREE.Vector3().fromArray(v)
             ),
             type: "3fv",
           };
           break;
         case "uniform2f":
           preparedUniforms[uniformName] = {
-            value: new THREE.Vector2().fromArray(uniform.value),
+            value: new THREE.Vector2().fromArray(uniform.value as number[]),
             type: "2f",
           };
           break;
