@@ -1,6 +1,7 @@
 "use client";
 
 import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { CardSpotlightDemo } from "@/components/Projects";
 import {
@@ -30,10 +31,10 @@ function CardsDisplay({ cards }: { cards: typeof backendCards }) {
               {card.description}
             </CardItem>
             <CardItem translateZ="100" className="w-full mt-4">
-              <img
+              <Image
                 src={card.image}
-                height="1000"
-                width="1000"
+                height={1000}
+                width={1000}
                 className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                 alt="thumbnail"
               />

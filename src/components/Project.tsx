@@ -1,8 +1,17 @@
 "use client";
-import { ProjectCard } from "@/components/ui/ProjectPages";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import Image from "next/image";
 
-export function ProjectDemo({ cards }: { cards: any[] }) {
+type Card = {
+  title: string;
+  description: string;
+  image: string;
+  tryLink: string;
+  tryLabel: string;
+  sourceCodeLink?: string;
+};
+
+export function ProjectDemo({ cards }: { cards: Card[] }) {
   return (
     <div className="flex flex-wrap gap-3 justify-center mx-auto my-10 max-w-7xl p-2">
       {cards.map((card, idx) => (
@@ -14,13 +23,14 @@ export function ProjectDemo({ cards }: { cards: any[] }) {
             <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
               {card.description}
             </CardItem>
-            <CardItem translateZ="100" className="w-full mt-4">
-              <img
+            <CardItem translateZ="100" className="w-full mt-4"> 
+              <Image
                 src={card.image}
-                height="1000"
-                width="1000"
+                height={240}
+                width={1000}
                 className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                 alt="thumbnail"
+                unoptimized
               />
             </CardItem>
             <div className="flex justify-between items-center mt-20">

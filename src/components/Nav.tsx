@@ -11,7 +11,7 @@ import {
 } from "@/components/ui/navbar-menu";
 import { useState } from "react";
 
-export function Nav({ className }: { className?: string }) {
+export function Nav() {
   const navItems = [
     {
       name: "Home",

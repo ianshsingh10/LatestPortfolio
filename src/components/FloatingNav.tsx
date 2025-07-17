@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { FloatingDock } from "@/components/ui/floating-dock";
 import {
   IconBrandGithub,
@@ -36,7 +37,7 @@ export function FloatingDockDemo() {
     {
       title: "UI/UX",
       icon: (
-        <img
+        <Image
           src="https://assets.aceternity.com/logo-dark.png"
           width={20}
           height={20}
@@ -51,21 +52,6 @@ export function FloatingDockDemo() {
         <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/projects?type=fullstack",
-    },
-
-    {
-      title: "Twitter",
-      icon: (
-        <IconBrandX className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
-    },
-    {
-      title: "GitHub",
-      icon: (
-        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "#",
     },
   ];
   return (

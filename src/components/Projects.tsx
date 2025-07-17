@@ -26,13 +26,5 @@ export const projects = [
     title: "Full Stack",
     link: "/projects?type=fullstack",
   },
-  {
-    title: "Amazon",
-    link: "https://amazon.com",
-  },
-  {
-    title: "Microsoft",
-    link: "https://microsoft.com",
-  },
 ];
 
