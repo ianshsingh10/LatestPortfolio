@@ -10,6 +10,7 @@ import React, {
   ComponentPropsWithoutRef,
   ElementType,
   ReactNode,
+  forwardRef,
 } from "react";
 
 type MouseEnterContextType = [
@@ -112,42 +113,55 @@ type CardItemProps<T extends ElementType> = {
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
-} & ComponentPropsWithoutRef<T>;
+} & Omit<ComponentPropsWithoutRef<T>, "as" | "children" | "ref" | "className">;
 
-export const CardItem = <T extends ElementType = "div">({
-  as,
-  children,
-  className,
-  translateX = 0,
-  translateY = 0,
-  translateZ = 0,
-  rotateX = 0,
-  rotateY = 0,
-  rotateZ = 0,
-  ...rest
-}: CardItemProps<T>) => {
-  const Tag = as || "div";
-  const ref = useRef<HTMLElement>(null);
+const CardItemInner = <T extends ElementType = "div" >(
+  {
+    as,
+    children,
+    className,
+    translateX = 0,
+    translateY = 0,
+    translateZ = 0,
+    rotateX = 0,
+    rotateY = 0,
+    rotateZ = 0,
+    ...rest
+  }: CardItemProps<T>,
+  ref: React.Ref<HTMLElement>
+) => {
+  const localRef = useRef<HTMLElement>(null);
+  const finalRef = (ref || localRef) as React.RefObject<HTMLElement>;
+
   const [isMouseEntered] = useMouseEnter();
 
   useEffect(() => {
-    if (!ref.current) return;
+    const el = finalRef.current;
+    if (!el) return;
 
-    ref.current.style.transform = isMouseEntered
+    el.style.transform = isMouseEntered
       ? `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`
       : `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
-  }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ]);
+  }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ, finalRef]);
+
+  const Component = as || "div";
 
   return (
-    <Tag
-      ref={ref}
+    <Component
+      {...(rest)}
+      ref={finalRef}
       className={cn("w-fit transition duration-200 ease-linear", className)}
-      {...rest}
     >
       {children}
-    </Tag>
+    </Component>
   );
 };
+
+export const CardItem = forwardRef(CardItemInner) as <T extends ElementType = "div">(
+  props: CardItemProps<T> & { ref?: React.Ref<HTMLElement> }
+) => React.ReactElement;
+
+
 // ---- useMouseEnter Hook ---- //
 export const useMouseEnter = () => {
   const context = useContext(MouseEnterContext);
