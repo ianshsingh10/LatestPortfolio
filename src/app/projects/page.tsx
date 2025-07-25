@@ -3,31 +3,43 @@
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { CardSpotlightDemo } from "@/components/Projects";
 import {
-  backendCards,
-  frontendCards,
+  basicCards,
+  aimlCards,
   uiuxCards,
   fullstackCards,
+  collabsCards,
+  hackathonCards,
 } from "@/components/Project";
 
-const cardsMap: Record<string, typeof backendCards> = {
-  backend: backendCards,
-  frontend: frontendCards,
-  uiux: uiuxCards,
+const cardsMap: Record<string, typeof basicCards> = {
   fullstack: fullstackCards,
+  basic: basicCards,
+  aiml: aimlCards,
+  uiux: uiuxCards,
+  collabs: collabsCards,
+  hackathons: hackathonCards,
 };
 
-function CardsDisplay({ cards }: { cards: typeof backendCards }) {
+function CardsDisplay({ cards }: { cards: typeof basicCards }) {
   return (
     <div className="flex flex-wrap gap-12 justify-center mt-[3vmin]">
       {cards.map((card, idx) => (
         <CardContainer className="inter-var" key={idx}>
           <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-            <CardItem translateZ="50" className="text-xl font-bold text-neutral-600 dark:text-white">
+            <CardItem
+              translateZ="50"
+              className="text-xl font-bold text-neutral-600 dark:text-white"
+            >
               {card.title}
             </CardItem>
-            <CardItem as="p" translateZ="60" className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
+            <CardItem
+              as="p"
+              translateZ="60"
+              className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
+            >
               {card.description}
             </CardItem>
             <CardItem translateZ="100" className="w-full mt-4">
@@ -39,7 +51,15 @@ function CardsDisplay({ cards }: { cards: typeof backendCards }) {
                 alt="thumbnail"
               />
             </CardItem>
-            <div className="flex justify-between items-center mt-20">
+
+              <CardItem
+                translateZ={100}
+                className="flex flex-row items-center mt-10 w-full"
+              >
+                <AnimatedTooltip items={card.skills} />
+              </CardItem>
+
+            <div className="flex justify-between items-center mt-5">
               <CardItem
                 translateZ={20}
                 as="a"

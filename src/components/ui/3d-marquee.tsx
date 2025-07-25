@@ -2,11 +2,13 @@
 
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
+import { StaticImageData } from "next/image";
+import Image from "next/image";
 export const ThreeDMarquee = ({
   images,
   className,
 }: {
-  images: string[];
+  images: StaticImageData[];
   className?: string;
 }) => {
   // Split the images array into 4 equal parts
@@ -19,7 +21,7 @@ export const ThreeDMarquee = ({
     <div
       className={cn(
         "mx-auto block h-[600px] overflow-hidden rounded-2xl max-sm:h-100",
-        className,
+        className
       )}
     >
       <div className="flex size-full items-center justify-center">
@@ -43,24 +45,20 @@ export const ThreeDMarquee = ({
               >
                 <GridLineVertical className="-left-4" offset="80px" />
                 {subarray.map((image, imageIndex) => (
-                  <div className="relative" key={imageIndex + image}>
+                  <motion.div
+                    whileHover={{ y: -10 }}
+                    transition={{ duration: 0.1, ease: "easeInOut" }}
+                    key={imageIndex + image.src} // use `.src` for unique key
+                  >
                     <GridLineHorizontal className="-top-4" offset="20px" />
-                    <motion.img
-                      whileHover={{
-                        y: -10,
-                      }}
-                      transition={{
-                        duration: 0.1,
-                        ease: "easeInOut",
-                      }}
-                      key={imageIndex + image}
+                    <Image
                       src={image}
                       alt={`Image ${imageIndex + 1}`}
                       className="aspect-[970/700] rounded-lg object-cover ring ring-gray-950/5 hover:shadow-2xl"
                       width={970}
                       height={700}
                     />
-                  </div>
+                  </motion.div>
                 ))}
               </motion.div>
             ))}
@@ -100,7 +98,7 @@ const GridLineHorizontal = ({
         "[mask-composite:exclude]",
         "z-30",
         "dark:bg-[linear-gradient(to_right,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]",
-        className,
+        className
       )}
     ></div>
   );
@@ -135,7 +133,7 @@ const GridLineVertical = ({
         "[mask-composite:exclude]",
         "z-30",
         "dark:bg-[linear-gradient(to_bottom,var(--color-dark),var(--color-dark)_50%,transparent_0,transparent)]",
-        className,
+        className
       )}
     ></div>
   );

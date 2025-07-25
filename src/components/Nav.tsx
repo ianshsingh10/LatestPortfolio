@@ -30,7 +30,7 @@ export function Nav({ }: { className?: string }) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
   return (
-    <div className="relative w-full">
+    <div className="relative w-full z-50">
       <Navbar>
         <NavBody setActive={setActive}>
           <MenuItem

@@ -11,20 +11,28 @@ export function CardSpotlightDemo() {
 
 export const projects = [
   {
-    title: "Frontend",
-    link: "/projects?type=frontend",
+    title: "Full Stack",
+    link: "/projects?type=fullstack",
   },
   {
-    title: "Backend",
-    link: "/projects?type=backend",
+    title: "Collabs",
+    link: "/projects?type=collabs",
+  },
+  {
+    title: "Hackathons",
+    link: "/projects?type=hackathons",
+  },
+  {
+    title: "AI/ML",
+    link: "/projects?type=aiml",
+  },
+  {
+    title: "Basic",
+    link: "/projects?type=basic",
   },
   {
     title: "UI/UX",
     link: "/projects?type=uiux",
-  },
-  {
-    title: "Full Stack",
-    link: "/projects?type=fullstack",
   },
 ];
 

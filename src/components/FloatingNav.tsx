@@ -11,26 +11,46 @@ import {
 export function FloatingDockDemo() {
   const links = [
     {
-      title: "Home",
+      title: "Project Home",
       icon: (
         <IconHome className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "/projects",
     },
-
     {
-      title: "Frontend",
+      title: "Full Stack",
       icon: (
-        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "/projects?type=frontend",
+      href: "/projects?type=fullstack",
     },
     {
-      title: "Backend",
+      title: "Collabs",
+      icon: (
+        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/projects?type=collabs",
+    },
+    {
+      title: "Hackathons",
+      icon: (
+        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/projects?type=hackathons",
+    },
+    {
+      title: "AI/ML",
       icon: (
         <IconNewSection className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "/projects?type=backend",
+      href: "/projects?type=aiml",
+    },
+    {
+      title: "Basic",
+      icon: (
+        <IconTerminal2 className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "/projects?type=basic",
     },
     {
       title: "UI/UX",
@@ -43,13 +63,6 @@ export function FloatingDockDemo() {
         />
       ),
       href: "/projects?type=uiux",
-    },
-    {
-      title: "Full Stack",
-      icon: (
-        <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
-      ),
-      href: "/projects?type=fullstack",
     },
   ];
   return (

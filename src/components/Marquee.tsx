@@ -1,51 +1,63 @@
 "use client";
 import { ThreeDMarquee } from "@/components/ui/3d-marquee";
-import { CardSpotlight } from "@/components/ui/card-spotlight";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
+
+import EVClub1 from "@/data/images/EVClub1.png";
+import calculator from "@/data/images/Calculator.png";
+import TicTacToe from "@/data/images/TicTacToe.png";
+import HealthEase from "@/data/images/HealthEase.png";
+import BuildSmart from "@/data/images/BuildSmart.png";
+import Attendance from "@/data/images/Attendance.png";
+import DevInferno from "@/data/images/DevInferno.png";
+import IEEEHackathon from "@/data/images/IEEEHackathon.png";
+import Dominos from "@/data/images/Dominos.png";
+import JobPortal from "@/data/images/JobPortal.png";
+import Hp from "@/data/images/HP.png";
 
 export function ThreeDMarqueeDemo() {
   const images = [
-    "https://assets.aceternity.com/cloudinary_bkp/3d-card.png",
-    "https://assets.aceternity.com/animated-modal.png",
-    "https://assets.aceternity.com/animated-testimonials.webp",
-    "https://assets.aceternity.com/cloudinary_bkp/Tooltip_luwy44.png",
-    "https://assets.aceternity.com/github-globe.png",
-    "https://assets.aceternity.com/glare-card.png",
-    "https://assets.aceternity.com/layout-grid.png",
-    "https://assets.aceternity.com/flip-text.png",
-    "https://assets.aceternity.com/hero-highlight.png",
-    "https://assets.aceternity.com/carousel.webp",
-    "https://assets.aceternity.com/placeholders-and-vanish-input.png",
-    "https://assets.aceternity.com/shooting-stars-and-stars-background.png",
-    "https://assets.aceternity.com/signup-form.png",
-    "https://assets.aceternity.com/cloudinary_bkp/stars_sxle3d.png",
-    "https://assets.aceternity.com/spotlight-new.webp",
-    "https://assets.aceternity.com/cloudinary_bkp/Spotlight_ar5jpr.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Parallax_Scroll_pzlatw_anfkh7.png",
-    "https://assets.aceternity.com/tabs.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Tracing_Beam_npujte.png",
-    "https://assets.aceternity.com/cloudinary_bkp/typewriter-effect.png",
-    "https://assets.aceternity.com/glowing-effect.webp",
-    "https://assets.aceternity.com/hover-border-gradient.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Infinite_Moving_Cards_evhzur.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Lamp_hlq3ln.png",
-    "https://assets.aceternity.com/macbook-scroll.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Meteors_fye3ys.png",
-    "https://assets.aceternity.com/cloudinary_bkp/Moving_Border_yn78lv.png",
-    "https://assets.aceternity.com/multi-step-loader.png",
-    "https://assets.aceternity.com/vortex.png",
-    "https://assets.aceternity.com/wobble-card.png",
-    "https://assets.aceternity.com/world-map.webp",
+    EVClub1,
+    HealthEase,
+    calculator,
+    BuildSmart,
+    Attendance,
+    Dominos,
+    DevInferno,
+    TicTacToe,
+    TicTacToe,
+    Hp,
+    IEEEHackathon,
+    HealthEase,
+    calculator,
+    Hp,
+    BuildSmart,
+    JobPortal,
+    EVClub1,
+    DevInferno,
+    Attendance,
+    IEEEHackathon,
+    Dominos,
+    JobPortal,
+    TicTacToe,
+    HealthEase,
+    IEEEHackathon,
+    Hp,
+    BuildSmart,
+    Attendance,
+    calculator,
+    DevInferno,
+    EVClub1,
+    Dominos,
+    JobPortal,
   ];
   return (
     <div className="relative mx-auto my-10 max-w-7xl rounded-3xl bg-gray-950/5 p-2 ring-1 ring-neutral-700/10 dark:bg-neutral-800">
       <a href="/projects" className="mb-10 z-10 absolute top-[50%] left-[50%] translate-[-50%] flex items-center justify-between">
-        <BackgroundGradient className="rounded-[22px] bg-white dark:bg-zinc-900">
-          <CardSpotlight>
-          <p className="text-neutral-300 relative z-20 text-sm">
+        <BackgroundGradient className="rounded-[22px]  p-1 bg-white dark:bg-zinc-900">
+          
+          <p className="text-neutral-300 p-5 relative z-20 text-sm">
             PROJECTS
           </p>
-        </CardSpotlight>
         </BackgroundGradient>
         
       </a>
