@@ -33,16 +33,16 @@ export const AnimatedTooltip = ({
     springConfig,
   );
 
-  const handleMouseMove = (event: any) => {
-    if (animationFrameRef.current) {
-      cancelAnimationFrame(animationFrameRef.current);
-    }
+  const handleMouseMove = (event: React.MouseEvent<HTMLElement>) => {
+  if (animationFrameRef.current) {
+    cancelAnimationFrame(animationFrameRef.current);
+  }
 
-    animationFrameRef.current = requestAnimationFrame(() => {
-      const halfWidth = event.target.offsetWidth / 2;
-      x.set(event.nativeEvent.offsetX - halfWidth);
-    });
-  };
+  animationFrameRef.current = requestAnimationFrame(() => {
+    const halfWidth = event.currentTarget.offsetWidth / 2;
+    x.set(event.nativeEvent.offsetX - halfWidth);
+  });
+};
 
   return (
     <>
