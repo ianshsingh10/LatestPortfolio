@@ -160,7 +160,7 @@ export const collabsCards = [
     image: HealthEase,
     tryLink: "https://example.com/dashboard",
     tryLabel: "Try HealthEase",
-    sourceCodeLink: "https://github.com/ianshsingh10/Health-Ease",
+    sourceCodeLink: " ",
     skills: [
       {
         id: 1,

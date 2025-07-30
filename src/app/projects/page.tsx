@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import { CardBody, CardContainer, DivItem, ParaItem, AnchorItem } from "@/components/ui/3d-card";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { CardSpotlightDemo } from "@/components/Projects";
 import {
@@ -29,20 +29,19 @@ function CardsDisplay({ cards }: { cards: typeof basicCards }) {
       {cards.map((card, idx) => (
         <CardContainer className="inter-var" key={idx}>
           <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-            <CardItem
+            <DivItem
               translateZ="50"
               className="text-xl font-bold text-neutral-600 dark:text-white"
             >
               {card.title}
-            </CardItem>
-            <CardItem
-              as="p"
+            </DivItem>
+            <ParaItem
               translateZ="60"
               className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
             >
               {card.description}
-            </CardItem>
-            <CardItem translateZ="100" className="w-full mt-4">
+            </ParaItem>
+            <DivItem translateZ="100" className="w-full mt-4">
               <Image
                 src={card.image}
                 height={1000}
@@ -50,34 +49,32 @@ function CardsDisplay({ cards }: { cards: typeof basicCards }) {
                 className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                 alt="thumbnail"
               />
-            </CardItem>
+            </DivItem>
 
-              <CardItem
+              <DivItem
                 translateZ={100}
                 className="flex flex-row items-center mt-10 w-full"
               >
                 <AnimatedTooltip items={card.skills} />
-              </CardItem>
+              </DivItem>
 
             <div className="flex justify-between items-center mt-5">
-              <CardItem
+              <AnchorItem
                 translateZ={20}
-                as="a"
                 href={card.tryLink}
                 target="__blank"
                 className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
               >
                 {card.tryLabel} →
-              </CardItem>
-              <CardItem
+              </AnchorItem>
+              <AnchorItem
                 translateZ={20}
-                as="a"
                 href={card.sourceCodeLink}
                 target="_blank"
                 className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
               >
                 Source Code
-              </CardItem>
+              </AnchorItem>
             </div>
           </CardBody>
         </CardContainer>

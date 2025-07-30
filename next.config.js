@@ -7,7 +7,6 @@ const nextConfig = {
     domains: [
       "images.unsplash.com",
       "assets.aceternity.com",
-      // add other domains if needed
     ],
   },
 };

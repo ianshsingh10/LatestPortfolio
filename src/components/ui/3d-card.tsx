@@ -76,18 +76,6 @@ export const CardContainer = ({
   );
 };
 
-type CardItemProps<T extends React.ElementType> = {
-  as?: T;
-  children: React.ReactNode;
-  className?: string;
-  translateX?: number | string;
-  translateY?: number | string;
-  translateZ?: number | string;
-  rotateX?: number | string;
-  rotateY?: number | string;
-  rotateZ?: number | string;
-} & React.ComponentPropsWithoutRef<T>;
-
 export const CardBody = ({
   children,
   className,
@@ -107,8 +95,7 @@ export const CardBody = ({
   );
 };
 
-export const CardItem = <T extends React.ElementType = "div">({
-  as,
+export const DivItem = ({
   children,
   className,
   translateX = 0,
@@ -118,38 +105,132 @@ export const CardItem = <T extends React.ElementType = "div">({
   rotateY = 0,
   rotateZ = 0,
   ...rest
-}: CardItemProps<T>) => {
-  const Tag = as || "div";
-  const ref = useRef<HTMLElement>(null);
+}: {
+  children: React.ReactNode;
+  className?: string;
+  translateX?: number | string;
+  translateY?: number | string;
+  translateZ?: number | string;
+  rotateX?: number | string;
+  rotateY?: number | string;
+  rotateZ?: number | string;
+}) => {
+  const Tag= "div";
+  const ref = useRef<HTMLDivElement>(null);
   const [isMouseEntered] = useMouseEnter();
 
   useEffect(() => {
-    if (!ref.current) return;
+    handleAnimations();
+  },);
 
+  const handleAnimations = () => {
+    if (!ref.current) return;
     if (isMouseEntered) {
-      ref.current.style.transform = `
-        translateX(${translateX}px) 
-        translateY(${translateY}px) 
-        translateZ(${translateZ}px) 
-        rotateX(${rotateX}deg) 
-        rotateY(${rotateY}deg) 
-        rotateZ(${rotateZ}deg)
-      `;
+      ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
     } else {
-      ref.current.style.transform = `
-        translateX(0px) 
-        translateY(0px) 
-        translateZ(0px) 
-        rotateX(0deg) 
-        rotateY(0deg) 
-        rotateZ(0deg)
-      `;
+      ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
     }
-  }, [isMouseEntered, translateX, translateY, translateZ, rotateX, rotateY, rotateZ]);
+  };
 
   return (
     <Tag
-      ref={ref} // or use forwardRef to properly type it
+      ref={ref}
+      className={cn("w-fit transition duration-200 ease-linear", className)}
+      {...rest}
+    >
+      {children}
+    </Tag>
+  );
+};
+
+export const ParaItem = ({
+  children,
+  className,
+  translateX = 0,
+  translateY = 0,
+  translateZ = 0,
+  rotateX = 0,
+  rotateY = 0,
+  rotateZ = 0,
+  ...rest
+}: {
+  children: React.ReactNode;
+  className?: string;
+  translateX?: number | string;
+  translateY?: number | string;
+  translateZ?: number | string;
+  rotateX?: number | string;
+  rotateY?: number | string;
+  rotateZ?: number | string;
+}) => {
+  const Tag= "p";
+  const ref = useRef<HTMLParagraphElement>(null);
+  const [isMouseEntered] = useMouseEnter();
+
+  useEffect(() => {
+    handleAnimations();
+  },);
+
+  const handleAnimations = () => {
+    if (!ref.current) return;
+    if (isMouseEntered) {
+      ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
+    } else {
+      ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+    }
+  };
+
+  return (
+    <Tag
+      ref={ref}
+      className={cn("w-fit transition duration-200 ease-linear", className)}
+      {...rest}
+    >
+      {children}
+    </Tag>
+  );
+};
+
+export const AnchorItem = ({
+  children,
+  className,
+  translateX = 0,
+  translateY = 0,
+  translateZ = 0,
+  rotateX = 0,
+  rotateY = 0,
+  rotateZ = 0,
+  ...rest
+}: {
+  children: React.ReactNode;
+  className?: string;
+  translateX?: number | string;
+  translateY?: number | string;
+  translateZ?: number | string;
+  rotateX?: number | string;
+  rotateY?: number | string;
+  rotateZ?: number | string;
+}) => {
+  const Tag= "a";
+  const ref = useRef<HTMLAnchorElement>(null);
+  const [isMouseEntered] = useMouseEnter();
+
+  useEffect(() => {
+    handleAnimations();
+  },);
+
+  const handleAnimations = () => {
+    if (!ref.current) return;
+    if (isMouseEntered) {
+      ref.current.style.transform = `translateX(${translateX}px) translateY(${translateY}px) translateZ(${translateZ}px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) rotateZ(${rotateZ}deg)`;
+    } else {
+      ref.current.style.transform = `translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)`;
+    }
+  };
+
+  return (
+    <Tag
+      ref={ref}
       className={cn("w-fit transition duration-200 ease-linear", className)}
       {...rest}
     >
