@@ -197,6 +197,8 @@ export const AnchorItem = ({
   translateX = 0,
   translateY = 0,
   translateZ = 0,
+  href = "#",
+  target = "_self",
   rotateX = 0,
   rotateY = 0,
   rotateZ = 0,
@@ -207,11 +209,12 @@ export const AnchorItem = ({
   translateX?: number | string;
   translateY?: number | string;
   translateZ?: number | string;
+  href?: string;
+  target?: string;
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
 }) => {
-  const Tag= "a";
   const ref = useRef<HTMLAnchorElement>(null);
   const [isMouseEntered] = useMouseEnter();
 
@@ -229,13 +232,15 @@ export const AnchorItem = ({
   };
 
   return (
-    <Tag
+    <a
       ref={ref}
+      href={href}
+      target={target}
       className={cn("w-fit transition duration-200 ease-linear", className)}
       {...rest}
     >
       {children}
-    </Tag>
+    </a>
   );
 };
 
