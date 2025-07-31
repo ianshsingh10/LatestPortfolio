@@ -2,6 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
+import { Suspense } from "react";
 import { CardBody, CardContainer, DivItem, ParaItem, AnchorItem } from "@/components/ui/3d-card";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
 import { CardSpotlightDemo } from "@/components/Projects";
@@ -83,19 +84,21 @@ function CardsDisplay({ cards }: { cards: typeof basicCards }) {
   );
 }
 
-export default function ProjectsPage() {
+function ProjectsContent() {
   const searchParams = useSearchParams();
   const type = searchParams.get("type");
 
-  if (!type) {
-    // Show spotlight overview as default
+  if (!type || !cardsMap[type]) {
     return <CardSpotlightDemo />;
   }
 
-  if (cardsMap[type]) {
-    return <CardsDisplay cards={cardsMap[type]} />;
-  }
+  return <CardsDisplay cards={cardsMap[type]} />;
+}
 
-  // fallback: show spotlight if type is invalid
-  return <CardSpotlightDemo />;
+export default function ProjectsPage() {
+  return (
+    <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+      <ProjectsContent />
+    </Suspense>
+  );
 }
