@@ -16,39 +16,39 @@ import ROBOXCerti from "@/data/certificates/ROBOXCerti.png";
 export function DraggableCardDemo() {
   const items = [
     {
-      title: "1st Runner Up in Dev Inferno Hackathon",
-      image: DevHackCertificate,
-      className: "absolute top-10 left-[20%] rotate-[-5deg]",
-    },
-    {
-      title: "The Narrator",
+      title: "Fundamentals of AI/ML",
       image: FundamentalsOfAMLLCerti,
       className: "absolute top-40 left-[25%] rotate-[-7deg]",
     },
     {
-      title: "Iceland",
+      title: "Programming in Java",
       image: ProgramminginJAVACerti,
       className: "absolute top-5 left-[40%] rotate-[8deg]",
     },
     {
-      title: "Japan",
+      title: "Python Essentials",
       image: PythonEssentialCerti,
       className: "absolute top-32 left-[55%] rotate-[10deg]",
     },
     {
-      title: "Norway",
+      title: "Robo Soccer",
       image: RoboSoccerCerti,
       className: "absolute top-20 right-[35%] rotate-[2deg]",
     },
     {
-      title: "New Zealand",
+      title: "Robo Rally",
       image: RoboRallyCerti,
       className: "absolute top-24 left-[45%] rotate-[-7deg]",
     },
     {
-      title: "Canada",
+      title: "ROBOX",
       image: ROBOXCerti,
       className: "absolute top-8 left-[30%] rotate-[4deg]",
+    },
+    {
+      title: "1st Runner Up in Dev Inferno Hackathon",
+      image: DevHackCertificate,
+      className: "absolute top-10 left-[20%] rotate-[-5deg]",
     },
   ];
   return (
@@ -63,7 +63,7 @@ export function DraggableCardDemo() {
             alt={item.title}
             width={100}
             height={100}
-            className="pointer-events-none relative z-10 h-80 w-120 object-cover"
+            className="pointer-events-none relative z-10 w-120 object-cover"
           />
           <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
             {item.title}
