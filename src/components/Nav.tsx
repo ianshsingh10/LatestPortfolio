@@ -18,10 +18,6 @@ export function Nav({ }: { className?: string }) {
       link: "/",
     },
     {
-      name: "About",
-      link: "/about",
-    },
-    {
       name: "Projects",
       link: "/projects",
     },
@@ -38,18 +34,6 @@ export function Nav({ }: { className?: string }) {
             active={active}
             item="Home"
             href="/"
-          ></MenuItem>
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="About"
-            href="/about"
-          ></MenuItem>
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Journey"
-            href="/journey"
           ></MenuItem>
           <MenuItem
             setActive={setActive}
@@ -84,13 +68,6 @@ export function Nav({ }: { className?: string }) {
               />
             </div>
           </MenuItem>
-
-          <MenuItem
-            setActive={setActive}
-            active={active}
-            item="Contact"
-            href="/contact"
-          ></MenuItem>
         </NavBody>
 
         {/* Mobile Navigation */}
