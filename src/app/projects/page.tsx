@@ -9,7 +9,7 @@ import { CardSpotlightDemo } from "@/components/Projects";
 import {
   basicCards,
   aimlCards,
-  uiuxCards,
+  // uiuxCards,
   fullstackCards,
   collabsCards,
   hackathonCards,
