@@ -30,9 +30,9 @@ export const projects = [
     title: "Basic",
     link: "/projects?type=basic",
   },
-  {
-    title: "UI/UX",
-    link: "/projects?type=uiux",
-  },
+  // {
+  //   title: "UI/UX",
+  //   link: "/projects?type=uiux",
+  // },
 ];
 

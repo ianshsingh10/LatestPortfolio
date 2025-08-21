@@ -44,7 +44,7 @@ export const fullstackCards = [
       "A full-stack e-commerce platform for building materials with user authentication and product management.",
     image: BuildSmart,
     tryLink: "https://example.com/ecommerce",
-    tryLabel: "Try Build Smart",
+    tryLabel: "",
     sourceCodeLink: "https://github.com/ianshsingh10/BuildSmart",
     skills: [
       {
@@ -105,7 +105,7 @@ export const fullstackCards = [
       "A job portal for connecting employers and job seekers with features like job listings and applications.",
     image: JobPortal,
     tryLink: "https://example.com/ecommerce",
-    tryLabel: "Try Job Portal",
+    tryLabel: "",
     sourceCodeLink: "https://github.com/ianshsingh10/Job-Portal",
     skills: [
       {
@@ -159,8 +159,8 @@ export const collabsCards = [
       "A centralized health data management system for easy access and tracking.",
     image: HealthEase,
     tryLink: "https://example.com/dashboard",
-    tryLabel: "Try HealthEase",
-    sourceCodeLink: " ",
+    tryLabel: "",
+    sourceCodeLink: "https://github.com/ianshsingh10/Health-Ease",
     skills: [
       {
         id: 1,
@@ -248,8 +248,8 @@ export const hackathonCards = [
     description:
       "A platform for sustainable practices and community engagement, developed for the IEEE Hackathon.",
     image: IEEEHackathon,
-    tryLink: "https://ianshsingh10.github.io/The-Electrical-Vehicle-Club/",
-    tryLabel: "Try Sustain Hub",
+    tryLink: "https://example.com/sustain-hub",
+    tryLabel: "",
     sourceCodeLink: "https://github.com/ianshsingh10/BeyondLevelOTeamCodeQuest",
     skills: [
       {
@@ -356,8 +356,8 @@ export const aimlCards = [
     description:
       "A machine learning model to track attendance using facial recognition.",
     image: Attendance,
-    tryLink: "https://example.com/landing",
-    tryLabel: "Try Attendance System",
+    tryLink: "https://example.com/attendance-system",
+    tryLabel: "",
     sourceCodeLink:
       "https://github.com/ianshsingh10/Attendance-System-Machine-Learning",
       skills: [
@@ -506,67 +506,67 @@ export const basicCards = [
   },
 ];
 
-export const uiuxCards = [
-  {
-    title: "Mobile App Design",
-    description: "Modern mobile app UI/UX design for seamless user experience.",
-    image: TicTacToe,
-    tryLink: "https://example.com/mobile-design",
-    tryLabel: "Try Design",
-    sourceCodeLink: "https://github.com/example/mobile-app-design",
-    skills: [
-      {
-        id: 1,
-        name: "HTML",
-        image: HTMLImg,
-      },
-      {
-        id: 2,
-        name: "CSS",
-        image:CSSImg,
-      },
-      {
-        id: 3,
-        name: "JavaScript",
-        image: JSImg,
-      },
-      {
-        id: 4,
-        name: "GitHub",
-        image: GITImg,
-      },
-    ],
-  },
-  {
-    title: "Web App Wireframe",
-    description:
-      "Wireframe for a web application, focusing on usability and flow.",
-    image: TicTacToe,
-    tryLink: "https://example.com/wireframe",
-    tryLabel: "Try Wireframe",
-    sourceCodeLink: "https://github.com/example/web-app-wireframe",
-    skills: [
-      {
-        id: 1,
-        name: "HTML",
-        image: HTMLImg,
-      },
-      {
-        id: 2,
-        name: "CSS",
-        image:CSSImg,
-      },
-      {
-        id: 3,
-        name: "JavaScript",
-        image: JSImg,
-      },
-      {
-        id: 4,
-        name: "GitHub",
-        image: GITImg,
-      },
-    ],
-  },
-];
+// export const uiuxCards = [
+//   {
+//     title: "Mobile App Design",
+//     description: "Modern mobile app UI/UX design for seamless user experience.",
+//     image: TicTacToe,
+//     tryLink: "https://example.com/mobile-design",
+//     tryLabel: "",
+//     sourceCodeLink: "https://github.com/example/mobile-app-design",
+//     skills: [
+//       {
+//         id: 1,
+//         name: "HTML",
+//         image: HTMLImg,
+//       },
+//       {
+//         id: 2,
+//         name: "CSS",
+//         image:CSSImg,
+//       },
+//       {
+//         id: 3,
+//         name: "JavaScript",
+//         image: JSImg,
+//       },
+//       {
+//         id: 4,
+//         name: "GitHub",
+//         image: GITImg,
+//       },
+//     ],
+//   },
+//   {
+//     title: "Web App Wireframe",
+//     description:
+//       "Wireframe for a web application, focusing on usability and flow.",
+//     image: TicTacToe,
+//     tryLink: "https://example.com/wireframe",
+//     tryLabel: "",
+//     sourceCodeLink: "https://github.com/example/web-app-wireframe",
+//     skills: [
+//       {
+//         id: 1,
+//         name: "HTML",
+//         image: HTMLImg,
+//       },
+//       {
+//         id: 2,
+//         name: "CSS",
+//         image:CSSImg,
+//       },
+//       {
+//         id: 3,
+//         name: "JavaScript",
+//         image: JSImg,
+//       },
+//       {
+//         id: 4,
+//         name: "GitHub",
+//         image: GITImg,
+//       },
+//     ],
+//   },
+// ];
 

@@ -19,7 +19,7 @@ const cardsMap: Record<string, typeof basicCards> = {
   fullstack: fullstackCards,
   basic: basicCards,
   aiml: aimlCards,
-  uiux: uiuxCards,
+  // uiux: uiuxCards,
   collabs: collabsCards,
   hackathons: hackathonCards,
 };
@@ -60,14 +60,14 @@ function CardsDisplay({ cards }: { cards: typeof basicCards }) {
               </DivItem>
 
             <div className="flex justify-between items-center mt-5">
-              <AnchorItem
+              {card.tryLabel &&<AnchorItem
                 translateZ={20}
                 href={card.tryLink}
                 target="__blank"
                 className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
               >
                 {card.tryLabel} →
-              </AnchorItem>
+              </AnchorItem>}
               <AnchorItem
                 translateZ={20}
                 href={card.sourceCodeLink}
