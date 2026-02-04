@@ -18,6 +18,10 @@ export function Nav({ }: { className?: string }) {
       link: "/",
     },
     {
+      name: "Journey",
+      link: "/journey",
+    },
+    {
       name: "Projects",
       link: "/projects",
     },
@@ -34,6 +38,12 @@ export function Nav({ }: { className?: string }) {
             active={active}
             item="Home"
             href="/"
+          ></MenuItem>
+          <MenuItem
+            setActive={setActive}
+            active={active}
+            item="Journey"
+            href="#journey"
           ></MenuItem>
           <MenuItem
             setActive={setActive}
