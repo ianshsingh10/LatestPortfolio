@@ -9,10 +9,11 @@ import IEEEHackathon from "@/data/images/IEEEHackathon.png";
 import Dominos from "@/data/images/Dominos.png";
 import JobPortal from "@/data/images/JobPortal.png";
 import Hp from "@/data/images/HP.png";
+import craVITImg from "@/data/images/cravit.png";
 
 
 import ReactImg from "@/data/skills/react.png";
-// import NextImg from "@/data/skills/next.png";
+import NextImg from "@/data/skills/next.png";
 import NodeImg from "@/data/skills/nodejs.png";
 import ExpressImg from "@/data/skills/expressjs.png";
 import MongoDBImg from "@/data/skills/mongodb.png";
@@ -38,6 +39,108 @@ import RazorPayImg from "@/data/skills/razorpay.png";
 import GSAPImg from "@/data/skills/gsap.jpg";
 
 export const fullstackCards = [
+  {
+    title: "craVIT",
+    description:
+      "A full-stack e-commerce platform for selling food across the campus with user authentication and product management.",
+    image: craVITImg,
+    tryLink: "https://www.cravit.online/",
+    tryLabel: "Try",
+    sourceCodeLink: "https://github.com/ianshsingh10/BuildSmart",
+    skills: [
+      {
+        id: 1,
+        name: "MongoDB",
+        image: MongoDBImg,
+      },
+      {
+        id: 2,
+        name: "Tailwind CSS",
+        image: TailwindImg,
+      },
+      {
+        id: 3,
+        name: "Razor Pay",
+        image: RazorPayImg,
+      },
+      {
+        id: 4,
+        name: "Google Cloud",
+        image: GoogleCloudImg,
+      },
+      {
+        id: 5,
+        name: "Cloudinary",
+        image: CloudinaryImg,
+      },
+      {
+        id: 6,
+        name: "Postman",
+        image: PostmanImg,
+      },
+      {
+        id: 7,
+        name: "GitHub",
+        image: GITImg,
+      },
+      {
+        id: 8,
+        name: "Next Js",
+        image: NextImg,
+      },
+    ],
+  },
+  {
+    title: "HealthEase",
+    description:
+      "A centralized health data management system for easy access and tracking.",
+    image: HealthEase,
+    tryLink: "https://example.com/dashboard",
+    tryLabel: "",
+    sourceCodeLink: "https://github.com/ianshsingh10/Health-Ease",
+    skills: [
+      {
+        id: 1,
+        name: "MongoDB",
+        image: MongoDBImg,
+      },
+      {
+        id: 2,
+        name: "Express.js",
+        image: ExpressImg,
+      },
+      {
+        id: 3,
+        name: "React.js",
+        image: ReactImg,
+      },
+      {
+        id: 4,
+        name: "Node.js",
+        image: NodeImg,
+      },
+      {
+        id: 5,
+        name: "Tailwind CSS",
+        image: TailwindImg,
+      },
+      {
+        id: 6,
+        name: "Google Cloud",
+        image: GoogleCloudImg,
+      },
+      {
+        id: 7,
+        name: "Postman",
+        image: PostmanImg,
+      },
+      {
+        id: 8,
+        name: "GitHub",
+        image: GITImg,
+      },
+    ],
+  },
   {
     title: "Build Smart: E-commerce Platform",
     description:
@@ -150,60 +253,7 @@ export const fullstackCards = [
       },
     ],
   },
-];
-
-export const collabsCards = [
-  {
-    title: "HealthEase",
-    description:
-      "A centralized health data management system for easy access and tracking.",
-    image: HealthEase,
-    tryLink: "https://example.com/dashboard",
-    tryLabel: "",
-    sourceCodeLink: "https://github.com/ianshsingh10/Health-Ease",
-    skills: [
-      {
-        id: 1,
-        name: "MongoDB",
-        image: MongoDBImg,
-      },
-      {
-        id: 2,
-        name: "Express.js",
-        image: ExpressImg,
-      },
-      {
-        id: 3,
-        name: "React.js",
-        image: ReactImg,
-      },
-      {
-        id: 4,
-        name: "Node.js",
-        image: NodeImg,
-      },
-      {
-        id: 5,
-        name: "Tailwind CSS",
-        image: TailwindImg,
-      },
-      {
-        id: 6,
-        name: "Google Cloud",
-        image: GoogleCloudImg,
-      },
-      {
-        id: 7,
-        name: "Postman",
-        image: PostmanImg,
-      },
-      {
-        id: 8,
-        name: "GitHub",
-        image: GITImg,
-      },
-    ],
-  },
+  
 ];
 
 export const hackathonCards = [

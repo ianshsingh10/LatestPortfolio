@@ -15,10 +15,6 @@ export const projects = [
     link: "/projects?type=fullstack",
   },
   {
-    title: "Collabs",
-    link: "/projects?type=collabs",
-  },
-  {
     title: "Hackathons",
     link: "/projects?type=hackathons",
   },
@@ -30,9 +26,5 @@ export const projects = [
     title: "Basic",
     link: "/projects?type=basic",
   },
-  // {
-  //   title: "UI/UX",
-  //   link: "/projects?type=uiux",
-  // },
 ];
 

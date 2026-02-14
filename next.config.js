@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // nothing needed for app router
+  images: {
+    domains: [
+      "images.unsplash.com",
+      "assets.aceternity.com",
+    ],
+  },
 };
 
 module.exports = nextConfig;

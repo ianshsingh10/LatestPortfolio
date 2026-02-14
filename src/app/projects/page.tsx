@@ -9,9 +9,7 @@ import { CardSpotlightDemo } from "@/components/Projects";
 import {
   basicCards,
   aimlCards,
-  // uiuxCards,
   fullstackCards,
-  collabsCards,
   hackathonCards,
 } from "@/components/Project";
 
@@ -19,8 +17,6 @@ const cardsMap: Record<string, typeof basicCards> = {
   fullstack: fullstackCards,
   basic: basicCards,
   aiml: aimlCards,
-  // uiux: uiuxCards,
-  collabs: collabsCards,
   hackathons: hackathonCards,
 };
 
