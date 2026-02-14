@@ -1,9 +1,5 @@
 "use client";
-import {
-  useScroll,
-  useTransform,
-  motion,
-} from "motion/react";
+import { useScroll, useTransform, motion } from "motion/react";
 import React, { useEffect, useRef, useState } from "react";
 
 interface TimelineEntry {
@@ -40,9 +36,8 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
           Changelog from my journey
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
-          I&apos;ve been working on Aceternity for the past 2 years. Here&apos;s
-          a timeline of my journey.
+        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base">
+          Full-Stack Developer specializing in the MERN stack, Next.js, and AWS. Engineers AI-integrated web solutions, including healthcare, chatbots and real-time geospatial platforms. Published researcher in IEEE Xplore with a focus on database management systems. Develops efficient algorithms using Java, C++, and Python, applying system design and DevOps principles. Experienced in technical leadership and executing large-scale community events.
         </p>
       </div>
 
@@ -65,7 +60,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
               <h3 className="md:hidden block text-2xl mb-4 text-left font-bold text-neutral-500 dark:text-neutral-500">
                 {item.title}
               </h3>
-              {item.content}{" "}
+              {item.content}
             </div>
           </div>
         ))}

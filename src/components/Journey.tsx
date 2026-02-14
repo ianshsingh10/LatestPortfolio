@@ -97,7 +97,7 @@ export function TimelineDemo() {
             <li>
               Currently pursuing a Bachelor&apos;s degree in Computer Science and Engineering, delving deep into the world of algorithms, data structures, and software development. My coursework focuses on robust problem-solving techniques and logical thinking.
             </li>
-            <li>CGPA: 8.4</li>
+            <li>CGPA: 8.63</li>
           </ul>
             <div className="grid grid-cols-2 gap-4">
               <Image
