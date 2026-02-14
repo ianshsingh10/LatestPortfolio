@@ -13,6 +13,7 @@ import IEEEHackathon from "@/data/images/IEEEHackathon.png";
 import Dominos from "@/data/images/Dominos.png";
 import JobPortal from "@/data/images/JobPortal.png";
 import Hp from "@/data/images/HP.png";
+import craVITImg from "@/data/images/cravit.png";
 
 export function ThreeDMarqueeDemo() {
   const images = [
@@ -20,6 +21,7 @@ export function ThreeDMarqueeDemo() {
     HealthEase,
     calculator,
     BuildSmart,
+    Hp,
     Attendance,
     Dominos,
     DevInferno,
@@ -27,9 +29,8 @@ export function ThreeDMarqueeDemo() {
     TicTacToe,
     Hp,
     IEEEHackathon,
-    HealthEase,
     calculator,
-    Hp,
+    craVITImg,
     BuildSmart,
     JobPortal,
     EVClub1,
