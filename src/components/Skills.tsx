@@ -7,9 +7,9 @@ export function HoverBorderGradientDemo() {
     <>
       <div className="m-10">
         <p className="text-5xl text-center">Skills</p>
-        <div className="flex flex-wrap">
-          <div className="m-5 flex flex-wrap w-[40vmin] gap-3 justify-center text-center">
-            <p className="text-xl">Languages & Core</p>
+        <div className="flex flex-wrap justify-center text-center">
+          <div className="m-5 flex flex-wrap w-[40vmin] flex-grow gap-3 justify-center text-center">
+            <p className="text-xl w-full">Languages & Core</p>
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
@@ -91,8 +91,8 @@ export function HoverBorderGradientDemo() {
               <span>Operating System</span>
             </HoverBorderGradient>
           </div>
-          <div className="m-5 flex flex-wrap w-[40vmin] gap-3 justify-center text-center">
-            <p className="text-xl">Frameworks & Libraries</p>
+          <div className="m-5 flex flex-wrap w-[40vmin] flex-grow gap-3 justify-center text-center">
+            <p className="text-xl w-full">Frameworks & Libraries</p>
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
@@ -158,8 +158,8 @@ export function HoverBorderGradientDemo() {
               <span>Aceternity UI</span>
             </HoverBorderGradient>
           </div>
-          <div className="m-5 flex flex-wrap w-[40vmin] gap-3 justify-center text-center">
-            <p className="text-xl">DevOps & Tools</p>
+          <div className="m-5 flex flex-wrap w-[40vmin] flex-grow gap-3 justify-center text-center">
+            <p className="text-xl w-full">DevOps & Tools</p>
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
@@ -209,15 +209,15 @@ export function HoverBorderGradientDemo() {
               <span>Razorpay</span>
             </HoverBorderGradient>
           </div>
-          <div className="m-5 flex flex-wrap w-[40vmin] justify-center text-center">
-            <p className="text-xl">Data & ML</p>
+          <div className="m-5 flex flex-wrap w-[40vmin] flex-grow gap-3 justify-center text-center">
+            <p className="text-xl w-full">Data & ML</p>
             <HoverBorderGradient
               containerClassName="rounded-full"
               as="button"
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
               <AceternityLogo />
-              <span>Aceternity UI</span>
+              <span>MySQL</span>
             </HoverBorderGradient>
             <HoverBorderGradient
               containerClassName="rounded-full"
@@ -225,7 +225,7 @@ export function HoverBorderGradientDemo() {
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
               <AceternityLogo />
-              <span>Aceternity UI</span>
+              <span>PostgreSQL</span>
             </HoverBorderGradient>
             <HoverBorderGradient
               containerClassName="rounded-full"
@@ -233,7 +233,7 @@ export function HoverBorderGradientDemo() {
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
               <AceternityLogo />
-              <span>Aceternity UI</span>
+              <span>MongoDB</span>
             </HoverBorderGradient>
             <HoverBorderGradient
               containerClassName="rounded-full"
@@ -241,7 +241,39 @@ export function HoverBorderGradientDemo() {
               className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
             >
               <AceternityLogo />
-              <span>Aceternity UI</span>
+              <span>CSV</span>
+            </HoverBorderGradient>
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              <AceternityLogo />
+              <span>Numpy</span>
+            </HoverBorderGradient>
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              <AceternityLogo />
+              <span>Pandas</span>
+            </HoverBorderGradient>
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              <AceternityLogo />
+              <span>Open CV</span>
+            </HoverBorderGradient>
+            <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="button"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              <AceternityLogo />
+              <span>Scikit-learn</span>
             </HoverBorderGradient>
           </div>
         </div>
