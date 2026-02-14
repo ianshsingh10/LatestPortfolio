@@ -62,34 +62,29 @@ export function Nav({ }: { className?: string }) {
           >
             <div className="text-sm grid grid-cols-2 gap-10">
               <ProductItem
-                title="Backend Projects"
-                href="/projects?type=backend"
-                src="https://assets.aceternity.com/cloudinary_bkp/3d-card.png"
-                description="Node.js, Express, MongoDB, etc."
-              />
-              <ProductItem
-                title="Frontend Projects"
-                href="/projects?type=frontend"
-                src="https://assets.aceternity.com/cloudinary_bkp/3d-card.png"
-                description="React, Next.js, Tailwind CSS, etc."
-              />
-              <ProductItem
-                title="Fullstack Projects"
+                title="Full-Stack Projects"
                 href="/projects?type=fullstack"
-                src="https://assets.aceternity.com/cloudinary_bkp/3d-card.png"
-                description="MERN, MEAN, etc."
+                description="Node.js, Express, MongoDB, Next.js, Tailwind CSS"
               />
               <ProductItem
-                title="All Projects"
-                href="/projects"
-                src="https://assets.aceternity.com/cloudinary_bkp/3d-card.png"
-                description="View all projects"
+                title="Hackathon Projects"
+                href="/projects?type=hackathons"
+                description="React, Next.js, Tailwind CSS, Node.js, Express"
+              />
+              <ProductItem
+                title="AI/ML Projects"
+                href="/projects?type=aiml"
+                description="Python, Flask, OpenCV, Scikit-learn"
+              />
+              <ProductItem
+                title="Basic Projects"
+                href="/projects?type=basic"
+                description="HTML, CSS, JavaScript"
               />
             </div>
           </MenuItem>
         </NavBody>
 
-        {/* Mobile Navigation */}
         <MobileNav>
           <MobileNavHeader>
             <MobileNavToggle

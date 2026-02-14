@@ -3,7 +3,7 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 export function CardSpotlightDemo() {
   return (
-    <div className="flex flex-wrap gap-3 h-[100vh] items-center justify-center mx-auto py-10 max-w-7xl p-2">
+    <div className="flex flex-wrap gap-3 h-[100vh] items-center justify-center mx-auto p-10 max-w-7xl p-2">
         <HoverEffect items={projects} />
     </div>
   );

@@ -22,7 +22,7 @@ const cardsMap: Record<string, typeof basicCards> = {
 
 function CardsDisplay({ cards }: { cards: typeof basicCards }) {
   return (
-    <div className="flex flex-wrap gap-12 justify-center mt-[3vmin]">
+    <div className="flex flex-wrap gap-12 justify-center p-[3vmin]">
       {cards.map((card, idx) => (
         <CardContainer className="inter-var" key={idx}>
           <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">

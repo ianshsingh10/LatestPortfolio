@@ -10,7 +10,7 @@ import Dominos from "@/data/images/Dominos.png";
 import JobPortal from "@/data/images/JobPortal.png";
 import Hp from "@/data/images/HP.png";
 import craVITImg from "@/data/images/cravit.png";
-
+import PortfolioImg from "@/data/images/Portfolio.png";
 
 import ReactImg from "@/data/skills/react.png";
 import NextImg from "@/data/skills/next.png";
@@ -19,14 +19,11 @@ import ExpressImg from "@/data/skills/expressjs.png";
 import MongoDBImg from "@/data/skills/mongodb.png";
 import PythonImg from "@/data/skills/python.png";
 import FlaskImg from "@/data/skills/flask.png";
-// import AngularImg from "@/data/skills/angularjs.png";
-// import CPPImg from "@/data/skills/cpp.png";
 import CSSImg from "@/data/skills/CSS.png";
 import GITImg from "@/data/skills/GitHub.png";
 import HTMLImg from "@/data/skills/html.png";
 import JSImg from "@/data/skills/javascript.png";
 import TailwindImg from "@/data/skills/tailwindcss.png";
-// import MySqlImg from "@/data/skills/mysql.png";
 import VercelImg from "@/data/skills/vercel.png";
 import openCVImg from "@/data/skills/opencv.png";
 import PandasImg from "@/data/skills/pandas.png";
@@ -45,8 +42,8 @@ export const fullstackCards = [
       "A full-stack e-commerce platform for selling food across the campus with user authentication and product management.",
     image: craVITImg,
     tryLink: "https://www.cravit.online/",
-    tryLabel: "Try",
-    sourceCodeLink: "https://github.com/ianshsingh10/BuildSmart",
+    tryLabel: "Try Cravit",
+    sourceCodeLink: "https://github.com/ianshsingh10/cravit",
     skills: [
       {
         id: 1,
@@ -95,8 +92,8 @@ export const fullstackCards = [
     description:
       "A centralized health data management system for easy access and tracking.",
     image: HealthEase,
-    tryLink: "https://example.com/dashboard",
-    tryLabel: "",
+    tryLink: "https://ieeexplore.ieee.org/document/11199277",
+    tryLabel: "Research Paper",
     sourceCodeLink: "https://github.com/ianshsingh10/Health-Ease",
     skills: [
       {
@@ -138,6 +135,57 @@ export const fullstackCards = [
         id: 8,
         name: "GitHub",
         image: GITImg,
+      },
+    ],
+  },
+  {
+    title: "Personal Portfolio",
+    description:
+      "My personal portfolio to demonstrate my skills and projects.",
+    image: PortfolioImg,
+    tryLink: "https://latest-portfolio-ianshsingh10.vercel.app/",
+    tryLabel: "Try Portfolio",
+    sourceCodeLink: "https://github.com/ianshsingh10/LatestPortfolio",
+    skills: [
+      {
+        id: 1,
+        name: "MongoDB",
+        image: MongoDBImg,
+      },
+      {
+        id: 2,
+        name: "Tailwind CSS",
+        image: TailwindImg,
+      },
+      {
+        id: 3,
+        name: "Razor Pay",
+        image: RazorPayImg,
+      },
+      {
+        id: 4,
+        name: "Google Cloud",
+        image: GoogleCloudImg,
+      },
+      {
+        id: 5,
+        name: "Cloudinary",
+        image: CloudinaryImg,
+      },
+      {
+        id: 6,
+        name: "Postman",
+        image: PostmanImg,
+      },
+      {
+        id: 7,
+        name: "GitHub",
+        image: GITImg,
+      },
+      {
+        id: 8,
+        name: "Next Js",
+        image: NextImg,
       },
     ],
   },
@@ -555,68 +603,3 @@ export const basicCards = [
     ],
   },
 ];
-
-// export const uiuxCards = [
-//   {
-//     title: "Mobile App Design",
-//     description: "Modern mobile app UI/UX design for seamless user experience.",
-//     image: TicTacToe,
-//     tryLink: "https://example.com/mobile-design",
-//     tryLabel: "",
-//     sourceCodeLink: "https://github.com/example/mobile-app-design",
-//     skills: [
-//       {
-//         id: 1,
-//         name: "HTML",
-//         image: HTMLImg,
-//       },
-//       {
-//         id: 2,
-//         name: "CSS",
-//         image:CSSImg,
-//       },
-//       {
-//         id: 3,
-//         name: "JavaScript",
-//         image: JSImg,
-//       },
-//       {
-//         id: 4,
-//         name: "GitHub",
-//         image: GITImg,
-//       },
-//     ],
-//   },
-//   {
-//     title: "Web App Wireframe",
-//     description:
-//       "Wireframe for a web application, focusing on usability and flow.",
-//     image: TicTacToe,
-//     tryLink: "https://example.com/wireframe",
-//     tryLabel: "",
-//     sourceCodeLink: "https://github.com/example/web-app-wireframe",
-//     skills: [
-//       {
-//         id: 1,
-//         name: "HTML",
-//         image: HTMLImg,
-//       },
-//       {
-//         id: 2,
-//         name: "CSS",
-//         image:CSSImg,
-//       },
-//       {
-//         id: 3,
-//         name: "JavaScript",
-//         image: JSImg,
-//       },
-//       {
-//         id: 4,
-//         name: "GitHub",
-//         image: GITImg,
-//       },
-//     ],
-//   },
-// ];
-
